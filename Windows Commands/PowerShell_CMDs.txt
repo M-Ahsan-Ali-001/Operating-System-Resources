@@ -1,0 +1,25 @@
+1) net user 'nameofuser' /logonpasswordchg:yes  (force user to change pasword on login)
+
+2) Get-LocalUser ( shows all the users)
+
+3) Get-LocalGroup ( shows all the group users)
+
+4) ls (print all directory)
+
+5) cd (change directory)
+
+6) start notepad "NameOfTheFile".txt (to make a new file)
+
+7) more "NameOfTheFile".txt (show content of file ,'Enter ': to  move to next, 'Space': to move to next page)
+
+8) cat "NameOfTheFile".txt -HEAD Number (Number: total lines you want to print , this prints the top n lines of a txt file)
+
+9) cat "NameOfTheFile".txt -HEAD Number (Number: total lines you want to print , this prints the last n lines of a txt file)
+
+10) net user 'nameofuser' /add (add auser)
+
+11)net user 'nameofuser' password /add (add user with password)
+
+12) net user 'nameofuser' /delete (delete a user)
+
+13) Select-String
