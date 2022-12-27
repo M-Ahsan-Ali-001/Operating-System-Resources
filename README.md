@@ -14,11 +14,13 @@ Click Create fork.
 
 # Creating a branch to work on
 git branch BRANCH-NAME
-git checkout BRANCH-NAME
+<br>git checkout BRANCH-NAME
 # Making and pushing changes
 git add .
-git commit -m "a short description of the change"
-git push
+
+<br>git commit -m "a short description of the change"
+
+<br>git push
 # Making a pull request
 At last, you're ready to propose changes into the main project! This is the final step in producing a fork of someone else's project, and arguably the most important. If you've made a change that you feel would benefit the community as a whole, you should definitely consider contributing back.
 
