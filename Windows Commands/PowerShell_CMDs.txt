@@ -22,4 +22,11 @@
 
 12) net user 'nameofuser' /delete (delete a user)
 
-13) Select-String
+13) Select-String -Path *.'extension' (extension : csv,txt cpp,c ) use to find patterns in files
+
+14) icacls (used to access controll list on fiels and folders)
+
+15) /? (prints infor about a specific command)
+
+16) 
+
