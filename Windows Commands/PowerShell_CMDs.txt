@@ -24,7 +24,7 @@
 
 13) Select-String -Path *.'extension' (extension : csv,txt cpp,c ) use to find patterns in files
 
-14) icacls (used to access controll list on fiels and folders)
+14) icacls (used  grant and revoke  access controll  on files and folders)
 
 15) /? (prints infor about a specific command)
 
