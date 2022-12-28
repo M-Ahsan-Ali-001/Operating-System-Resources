@@ -31,5 +31,8 @@
 16)   icacls 'C:\txts' /grant 'Everyone:(OI)(CI)(R)' (granting read permission to Everyone)
 
 
-17)   icacls 'C:\txts' /grant 'Authenticated Users:(OI)(CI)(R)' (granting read permission toadmins
-18) icacls 'C:\txts' /remove Everyone
+17)   icacls 'C:\txts' /grant 'Authenticated Users:(OI)(CI)(R)' (granting read permission to admins)
+
+18)   icacls 'C:\txts' /remove Everyone
+
+19) 
