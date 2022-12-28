@@ -21,3 +21,11 @@
 11) man (print syntax)
 
 12) sudo chgrp 'group-name' 'file-name'
+
+13) passwd (to change password)
+
+14) sudo  chmod (u+s) 'file-name' (SET-UID , execute using UID)
+
+15) sudo  chmod (2755 or g+s) 'file-name' (SET-UID , execute using UID)
+
+16) 15) sudo  chmod +t 
