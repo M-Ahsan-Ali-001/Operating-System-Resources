@@ -1,1 +1,23 @@
 1) ls
+
+2) mv
+
+3) sudo -i
+
+4)cat /etc/passwd
+
+5) grep 
+
+6)cp
+
+7) chmod u+x 'file' (change permission , u =>user , o=> other ,g => group , x=> execute ,r => read , w =>write , '-' to remove , '+' to add)
+
+8) chmod u-x 'file' (change permission , u =>user , o=> other ,g => group , x=> execute ,r => read , w =>write)
+
+9) ls -l (prints the file operation permissions )
+
+10) --help (print syntax) 
+
+11) man (print syntax)
+
+12) sudo chgrp 'group-name' 'file-name'
