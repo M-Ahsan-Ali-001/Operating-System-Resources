@@ -28,5 +28,8 @@
 
 15) /? (prints infor about a specific command)
 
-16) 
+16)   icacls 'C:\txts' /grant 'Everyone:(OI)(CI)(R)' (granting read permission to Everyone)
 
+
+17)   icacls 'C:\txts' /grant 'Authenticated Users:(OI)(CI)(R)' (granting read permission toadmins
+18) icacls 'C:\txts' /remove Everyone
