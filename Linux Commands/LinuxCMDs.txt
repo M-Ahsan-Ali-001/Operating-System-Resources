@@ -28,4 +28,6 @@
 
 15) sudo  chmod (2755 or g+s) 'file-name' (SET-UID , execute using UID)
 
-16) 15) sudo  chmod +t 
+16)  sudo  chmod +t 
+ 
+ 17) sudo chown 'user' (change file user )
