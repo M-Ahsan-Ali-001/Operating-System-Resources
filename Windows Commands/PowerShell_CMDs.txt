@@ -26,7 +26,7 @@
 
 14) icacls (used  grant and revoke  access controll  on files and folders)
 
-15) /? (prints infor about a specific command)
+15) /? (prints info about a specific command)
 
 16)   icacls 'C:\txts' /grant 'Everyone:(OI)(CI)(R)' (granting read permission to Everyone)
 
@@ -35,4 +35,6 @@
 
 18)   icacls 'C:\txts' /remove Everyone
 
-19) 
+19) compress-Archive -Path C:\Users (to compress a folder/file)
+
+20) 
