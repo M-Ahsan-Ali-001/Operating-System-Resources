@@ -2,7 +2,7 @@
 
 2) mv
 
-3) sudo -i
+3) sudo -i (change to root)
 
 4)cat /etc/passwd
 
@@ -31,3 +31,11 @@
 16)  sudo  chmod +t 
  
  17) sudo chown 'user' (change file user )
+ 
+ 18)dpkg used for debian
+ 
+ 19)rpm used for redhat
+ 
+ 20) 7z e 'file-name' (extract a file,7zip  )
+ 
+ 21) 
