@@ -32,10 +32,20 @@
  
  17) sudo chown 'user' (change file user )
  
+ 18) sudo apt install 'package-name'(install packages)
+ 
+ 19) sudo apt remove 'package-name' (deleting packages)
+ 
+ 20) useradd 'name'
+ 
+ 
+ 
  18)dpkg used for debian
  
  19)rpm used for redhat
  
  20) 7z e 'file-name' (extract a file,7zip  )
  
- 21) 
+ 21) sudo apt uprage (to upgrade apt)
+ 
+ 22) 
