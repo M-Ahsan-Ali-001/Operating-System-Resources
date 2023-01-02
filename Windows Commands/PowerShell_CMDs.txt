@@ -39,8 +39,10 @@
 
 20) Find-Package sysinternals -IncludeDependencies
 
-21) install -Package _name sysinternals
+21) install -Package -name sysinternals
 
 22) Get_package -name sysinternals (to check)
 
 23) Uninstall-Package -Name sysinternals (uninstall)
+
+
