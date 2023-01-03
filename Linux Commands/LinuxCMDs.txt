@@ -48,4 +48,4 @@
  
  21) sudo apt uprage (to upgrade apt)
  
- 22) 
+ 22) uname -r (print kernel version )
