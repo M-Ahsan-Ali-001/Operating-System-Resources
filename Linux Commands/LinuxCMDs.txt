@@ -49,3 +49,23 @@
  21) sudo apt uprage (to upgrade apt)
  
  22) uname -r (print kernel version )
+
+ 23) sudo parted -l (disks info)
+ 
+ 24) sudo parted /dev/sdb (select a disk)
+ 
+ 25) mklabel gpt (making label for unkown disk space)
+ 
+ 26) mkpart primary ext4 1MiB 5GiB (file type, start size , end size) (making space)
+ 
+ 27) sudo mkfs -t ext4 /dev/sdb2
+ 
+ 28) sudo mount /dev/sdb1/my_usb/ (mounting to directory)
+ 
+ 29) sudo unmount /dev/sdb1
+ 
+ 30) cat /etc/fstab (unique ids)
+
+31)sudo blkid (to get UUID's )
+ 
+32)
