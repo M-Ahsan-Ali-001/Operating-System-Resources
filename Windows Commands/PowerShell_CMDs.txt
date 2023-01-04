@@ -45,4 +45,9 @@
 
 23) Uninstall-Package -Name sysinternals (uninstall)
 
+24) Diskpart (Enter) => list disk (Enter ) = > select disk 1 (enter) => clean (enter ) => create partition primary (enter) => select partion 1 (enter) => active(enter)=> format FS=NTFS label= drive-x quick (=> ignore ,use to format and change type of a disk/usb)
+
+25) mklink file1_1_symlink 'file-name'.txt (creating a symbolic link)
+
+26) mklink /H file_1_hardlink 'fiel-name' (creating hared link)
 
