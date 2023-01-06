@@ -49,5 +49,8 @@
 
 25) mklink file1_1_symlink 'file-name'.txt (creating a symbolic link)
 
-26) mklink /H file_1_hardlink 'fiel-name' (creating hared link)
+26) mklink /H file_1_hardlink 'file-name' (creating hared link)
 
+27) fsutil repair query C: (reccovery)
+
+28) chkdsk /F D: ( print health of disk)
