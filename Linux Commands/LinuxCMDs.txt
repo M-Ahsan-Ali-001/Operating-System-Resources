@@ -68,4 +68,14 @@
 
 31)sudo blkid (to get UUID's )
  
-32)
+32) ln -s  (to print soft links)
+
+33) ln (to print hard links)
+
+34) du -h (prints disk usage of a specific directory)
+
+35) df -h (shows free space ,'-h' print human readable form)
+
+36) sudo fsck /dev/sda (check any issue in file system)
+
+37) 
