@@ -54,3 +54,17 @@
 27) fsutil repair query C: (reccovery)
 
 28) chkdsk /F D: ( print health of disk)
+
+29) taskkill /pid ('cmd' to exit a process )
+
+30) SIGINT (signal interrupt)
+
+31) Get-Process (print all the process)
+
+
+32) tasklist  ('cmd' print all the process) 
+
+** " procex64.exe"=>Process Explorer use to view running processes**
+
+33)
+
