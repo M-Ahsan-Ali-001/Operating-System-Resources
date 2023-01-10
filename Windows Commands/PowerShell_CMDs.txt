@@ -64,8 +64,26 @@
 
 32) tasklist  ('cmd' print all the process) 
 
+
 ** " procex64.exe"=>Process Explorer use to view running processes**
+
 ** Resource Monitor Tool  print detail about different resources **
 
 33) Get-Process | Sort CPU - descending | select -first 3 -Property ID,ProcessName,CPU (print first 3 process of CPU)
 
+**putty an open source program for shh (secure shell , remote connection ,  neeed to be downloaded )**
+
+34)putty.exe -ssh 'root-user'*'ip-address' 22 
+
+**remote dekstop in the start menu **
+
+**pscp to send files using remote connection**
+
+35) pscp.exe 'path' 'root-user'@'ip-addess'
+
+36) net share  ShareMe= 'path' /grant:everyone,full ( Specifies the network name of the shared resource and give permssion )
+
+** virtual instance is single virtual machine**
+
+**Event viewer**
+37)
