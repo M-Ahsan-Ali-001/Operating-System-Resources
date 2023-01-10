@@ -38,44 +38,60 @@
  
  20) useradd 'name'
  
- 
- 
- 18)dpkg used for debian
- 
- 19)rpm used for redhat
- 
- 20) 7z e 'file-name' (extract a file,7zip  )
- 
- 21) sudo apt uprage (to upgrade apt)
- 
- 22) uname -r (print kernel version )
 
- 23) sudo parted -l (disks info)
+ 21)dpkg used for debian
  
- 24) sudo parted /dev/sdb (select a disk)
+ 22)rpm used for redhat
  
- 25) mklabel gpt (making label for unkown disk space)
+ 23) 7z e 'file-name' (extract a file,7zip  )
  
- 26) mkpart primary ext4 1MiB 5GiB (file type, start size , end size) (making space)
+ 24) sudo apt uprage (to upgrade apt)
  
- 27) sudo mkfs -t ext4 /dev/sdb2
- 
- 28) sudo mount /dev/sdb1/my_usb/ (mounting to directory)
- 
- 29) sudo unmount /dev/sdb1
- 
- 30) cat /etc/fstab (unique ids)
+ 25) uname -r (print kernel version )
 
-31)sudo blkid (to get UUID's )
+ 26) sudo parted -l (disks info)
  
-32) ln -s  (to print soft links)
+ 27) sudo parted /dev/sdb (select a disk)
+ 
+ 28) mklabel gpt (making label for unkown disk space)
+ 
+ 29) mkpart primary ext4 1MiB 5GiB (file type, start size , end size) (making space)
+ 
+ 30) sudo mkfs -t ext4 /dev/sdb2
+ 
+ 31) sudo mount /dev/sdb1/my_usb/ (mounting to directory)
+ 
+ 32) sudo unmount /dev/sdb1
+ 
+ 33) cat /etc/fstab (unique ids)
 
-33) ln (to print hard links)
+34)sudo blkid (to get UUID's )
+ 
+35) ln -s  (to print soft links)
 
-34) du -h (prints disk usage of a specific directory)
+36) ln (to print hard links)
 
-35) df -h (shows free space ,'-h' print human readable form)
+37) du -h (prints disk usage of a specific directory)
 
-36) sudo fsck /dev/sda (check any issue in file system)
+38) df -h (shows free space ,'-h' print human readable form)
 
-37) 
+39) sudo fsck /dev/sda (check any issue in file system)
+
+40) ps -x (show snap shot of current processes)
+
+41) ps -ef (all and full detail process)
+
+42) ps -f | grep Chrome (get process with name Chrome)
+
+43) /proc is directory to get more detail about processes
+
+**kill commands send  SigTerm or singnal termination to process but take some time to clean resources used by terminated processes**
+
+44)kill PID
+**SIGKILL signal kill a process before it properly cleaned the resources it used**
+
+45) kill- KILL PID
+
+46) kill -TSTP pid (to send process to suspended state , cntrl +z)
+
+47) kill -CONT PID (to resume the execution of process) 
