@@ -88,6 +88,7 @@
 **kill commands send  SigTerm or singnal termination to process but take some time to clean resources used by terminated processes**
 
 44)kill PID
+
 **SIGKILL signal kill a process before it properly cleaned the resources it used**
 
 45) kill -KILL PID
@@ -102,4 +103,29 @@
 
 50) ls -of (lists open file and print what processes are using them)
 
-51) 
+
+** ssh secure shell  remote connection**
+
+**VPN can also be used as remote server ***
+51) ssh  'username'@'ip'
+
+**SCP secure copy to send files using remote connection **
+
+52) scp /'path'/'file-name' 'root-user'@'ip-address'
+
+** /var/log stores **
+
+** /var/log/syslog contain more info **  
+
+**   logrotate is designed to ease administration of systems that generate large numbers of log
+       files.   It  allows  automatic  rotation,  compression, removal, and mailing of log files.
+       Each log file may be handled daily, weekly, monthly, or when it grows too large. **
+
+53)  tail -f /var/log/syslog ( prints real time logs)
+
+**Semantic ghost & Clonezilla cloning disk software **
+
+54) sudo dd  (to copy fiele & clone , drive must unmounted first)
+
+55)
+
