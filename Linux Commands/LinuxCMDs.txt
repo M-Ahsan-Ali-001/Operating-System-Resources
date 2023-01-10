@@ -90,8 +90,16 @@
 44)kill PID
 **SIGKILL signal kill a process before it properly cleaned the resources it used**
 
-45) kill- KILL PID
+45) kill -KILL PID
 
 46) kill -TSTP pid (to send process to suspended state , cntrl +z)
 
 47) kill -CONT PID (to resume the execution of process) 
+
+48) top (print process resource usages)
+
+49) uptime (prints => current time ,time , user logged in , system load average)
+
+50) ls -of (lists open file and print what processes are using them)
+
+51) 
