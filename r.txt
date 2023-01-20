@@ -1,0 +1,220 @@
+#include<iostream>
+#include<queue>
+using namespace std;
+
+struct RR {
+	int* burstTime, 
+		* rem_burstTime,
+		* TAT, 
+		* CT,
+		* arivalTime,
+		totalProcess, 
+		timeQuatum
+		, Time = 0, 
+		sumOfBt = 0;
+	queue<int> readyQueue;
+
+};
+
+RR input(RR finder)
+{
+
+	for (int i = 0; i < (2 * finder.totalProcess); i++)
+	{
+		if (i < finder.totalProcess)
+		{
+			cout << "Enter AT-" << i + 1 << " : ";
+			cin >> finder.arivalTime[i];
+		}
+		else
+		{
+			int holdit;
+			cout << "Enter BT-" << i % finder.totalProcess + 1 << " : ";
+			cin >> holdit;
+			finder.rem_burstTime[i % finder.totalProcess] = holdit;
+			finder.burstTime[i % finder.totalProcess] = holdit;;
+			finder.sumOfBt += finder.burstTime[i % finder.totalProcess];
+
+		}
+	}
+	return finder;
+
+}
+RR Completion_Time(RR finder)
+{
+	int i = 0, x = 0;
+	while (finder.Time < finder.sumOfBt)
+	{
+		if (finder.rem_burstTime[x] > finder.timeQuatum && finder.arivalTime[x] <= i && i < finder.totalProcess)
+		{
+			finder.readyQueue.push(x);
+			finder.rem_burstTime[x] -= finder.timeQuatum;
+			finder.Time += finder.timeQuatum;
+			//cout << "\nA\n";
+			//cout << "\nTime" << Time<<endl;
+
+
+		}
+		else if (finder.rem_burstTime[x] <= finder.timeQuatum && finder.arivalTime[x] <= i && finder.rem_burstTime[x] != 0 && i < finder.totalProcess)
+		{
+			//readyQueue.push(x);
+			finder.Time += finder.rem_burstTime[x];
+			finder.rem_burstTime[x] -= finder.rem_burstTime[x];
+			finder.CT[x] = finder.Time;
+			//cout << "\nB\n";
+
+			//cout << "\nP" << x + 1 << " Time " << Time<<endl;
+
+		}
+
+		if (finder.arivalTime[x] > i && finder.rem_burstTime[x] != 0 && i < finder.totalProcess)
+		{
+
+			//cout << "\nC\n";
+			int seq = finder.arivalTime[x] - x;//i not in bracket rightside
+			int j = 0;
+			while (j < seq)
+			{
+				int tempHold = finder.readyQueue.front();
+				finder.readyQueue.pop();
+				if (finder.rem_burstTime[tempHold] > finder.timeQuatum)//&& arivalTime[tempHold] < j)
+				{
+					finder.readyQueue.push(tempHold);
+					finder.rem_burstTime[tempHold] -= finder.timeQuatum;
+					finder.Time += finder.timeQuatum;
+					//cout << "\nE\n";
+					//cout << "\nTime" << Time << endl;
+
+
+				}
+				else if (finder.rem_burstTime[tempHold] <= finder.timeQuatum && finder.rem_burstTime[tempHold] != 0)
+				{
+					//readyQueue.push(tempHold);
+					finder.Time += finder.rem_burstTime[tempHold];
+					finder.rem_burstTime[tempHold] -= finder.rem_burstTime[tempHold];// i  leftside
+					finder.CT[tempHold] = finder.Time;
+					//cout << "\nF\n";
+					//cout << "\nP" << x + 1 << " Time " << Time << endl;
+
+				}
+				j++;
+
+			}
+			//i -= 1;
+
+			//test
+
+			if (finder.rem_burstTime[x] > finder.timeQuatum)//&& arivalTime[tempHold] < j)
+			{
+				finder.readyQueue.push(x);
+				finder.rem_burstTime[x] -= finder.timeQuatum;
+				finder.Time += finder.timeQuatum;
+				//cout << "\nG\n";
+
+
+			}
+			else if (finder.rem_burstTime[x] <= finder.timeQuatum && finder.rem_burstTime[x] != 0)
+			{
+				//readyQueue.push(tempHold);
+				finder.Time += finder.rem_burstTime[x];
+				finder.rem_burstTime[x] -= finder.rem_burstTime[x];
+				finder.CT[x] = finder.Time;
+				//cout << "\nBb\n";
+				//cout << "\nP" << x << " Time " << Time << endl;
+
+			}
+
+		}
+
+		if (i > finder.totalProcess)
+		{
+			int tempHold = finder.readyQueue.front();
+			finder.readyQueue.pop();
+			//cout << "\nD\n";
+			if (finder.rem_burstTime[tempHold] > finder.timeQuatum)//&& arivalTime[tempHold] < j)
+			{
+				finder.readyQueue.push(tempHold);
+				finder.rem_burstTime[tempHold] -= finder.timeQuatum;
+				finder.Time += finder.timeQuatum;
+
+
+			}
+			else if (finder.rem_burstTime[tempHold] <= finder.timeQuatum && finder.rem_burstTime[tempHold] != 0)
+			{
+				//readyQueue.push(tempHold);
+				finder.Time += finder.rem_burstTime[tempHold];
+				finder.rem_burstTime[tempHold] -= finder.rem_burstTime[tempHold];
+				finder.CT[tempHold] = finder.Time;
+				//cout << "\nP" << tempHold + 1 << " Time " << Time << endl;
+
+			}
+
+		}
+
+		i++;
+		x++;
+		if (i == finder.totalProcess)
+		{
+			x = 0;
+		}
+
+	}
+	return finder;
+
+}
+
+
+int main()
+{
+	RR finder;
+
+
+
+	cout << "Enter Total Number of processes:";
+	cin >> finder.totalProcess;
+
+
+	cout << "Enter Time Quatum:";
+	cin >> finder.timeQuatum;
+
+	finder.burstTime = new int[finder.totalProcess];
+	finder.rem_burstTime = new int[finder.totalProcess];
+	finder.arivalTime = new int[finder.totalProcess];
+	finder.TAT = new int[finder.totalProcess];
+	finder.CT = new int[finder.totalProcess];
+
+    finder = input(finder);
+	/*for (int i = 0; i < (2 * finder.totalProcess); i++)
+	{
+		if (i < finder.totalProcess)
+		{
+			cout << "Enter AT-"<<i+1<<" : ";
+			cin >> finder.arivalTime[i];
+		}
+		else
+		{
+			int holdit;
+			cout << "Enter BT-" << i%finder.totalProcess  + 1 << " : ";
+			cin >> holdit;
+			finder.rem_burstTime[i % finder.totalProcess] = holdit;
+				finder.burstTime[i % finder.totalProcess] = holdit;;
+			finder.sumOfBt += finder.burstTime[i % finder.totalProcess];
+		
+		}
+	}*/
+
+	//cout << rem_burstTime[0];
+
+	
+	finder =Completion_Time(finder);
+	
+	cout << "CT\n";
+	for (int r = 0; r < finder.totalProcess; r++)
+	{
+		cout << finder.CT[r]<<endl;
+	}
+
+}
+
+
+
